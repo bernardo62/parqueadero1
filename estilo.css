@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	background:  #FFF;
+	color: rgb(0, 0, 0);
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+}
+/* Crear grilla  (No hay necesidad de usar float */
+
+
+.contenedor {
+	
+    width: 90%;
+	max-width: 1000px;
+	margin: 5px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(6, auto);
+
+	grid-template-areas:    "user logo vehiculo"
+                            "formI logo formD"
+                            "formI l formD"                     
+                            "formI l formD"
+                            "formI l formD"
+                            "cantU b b";
+}
+
+
+.contenedor .user{
+    grid-area: user;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.contenedor .formI{
+	padding-left: 10px;
+	padding-top: 15px;
+	border: 10px double darkgray;
+	border-radius: 20px;
+	margin:left;
+    grid-area: formI;
+    background: #EEE;
+}
+
+.contenedor label{
+    color: rgb(17, 17, 17);
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.contenedor input{
+    color: honeydew;
+    width: 65%;
+    display: inline-block;
+    background: rgb(53, 53, 53);
+    border: white 5px ridge;
+}
+
+.contenedor .cantUL{
+    color: black;
+    width: 65%;
+    display: inline-block;
+}
+
+.contenedor .b1{
+    color: rgb(248, 10, 10);
+    background: darkgreen;
+}
+
+.contenedor .cantUC{
+    color: black;
+    background: whitesmoke;
+    width: 20%;
+    display: inline-block;
+    border: 6px outset
+}
+
+
+/* Formulario de vehículos   formD */
+
+.contenedor .vehiculo{
+    grid-area: vehiculo;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.contenedor .formD{
+	padding-left: 20px;
+	padding-top: 15px;
+	border: 10px double darkgray;
+	border-radius: 10px;
+	margin:left;
+    grid-area: formD;
+    background: #EEE;
+}
+
+
+
+/* Form central formC */
+
+.contenedor .logo{
+    grid-area: logo;
+    margin: auto;}
